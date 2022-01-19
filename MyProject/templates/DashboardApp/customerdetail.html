@@ -1,0 +1,28 @@
+{% extends "DashboardApp/base.html" %}
+{% block form %}
+<div>
+    <h3 style="text-align: center" class="mt-2 text-dark">Customer Details</h3>
+    {% csrf_token %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+
+    <ul class="nav navbar-nav mx-auto">
+          <li class="nav-item me-5"><a class="text-light bg-dark " href="{% url 'personaldetail' %}">Personal</a></li>
+          <li class="nav-item me-5"><a class="text-light bg-dark " href="{% url 'addressdetail' %}">Address</a></li>
+          <li class="nav-item me-5"><a class="text-light bg-dark" href="{% url 'bankdetail' %}">Bank</a></li>
+          <li class="nav-item me-5"><a class="text-light bg-dark" href="{% url 'perloandetail' %}">Previous Loan</a></li>
+          <li class="nav-item me-5"><a class="text-light bg-dark" href="{% url 'uploaddetail' %}">Documents</a></li>
+    </ul>
+
+</nav>
+
+
+
+</div>
+
+
+{% block table %}
+
+{% endblock table%}
+
+
+{% endblock form %}
