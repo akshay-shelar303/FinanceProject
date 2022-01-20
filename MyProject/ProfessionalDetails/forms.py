@@ -1,6 +1,8 @@
 from django import forms
 from .models import *
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
 
 class SalariedModelForm(forms.ModelForm):
     class Meta:
@@ -19,7 +21,7 @@ class SalariedModelForm(forms.ModelForm):
         widgets = {
 
             'designation': forms.TextInput(attrs={'placeholder': 'Enter Your Designation'}),
-            'joining_date': forms.TextInput(attrs={'placeholder': 'Enter Date of Joining'}),
+            'joining_date': DateInput(attrs={'placeholder': 'Enter Date of Joining'}),
             'year_of_exp': forms.TextInput(attrs={'placeholder':'Experience in Years'}),
             'monthly_income': forms.TextInput(attrs={'placeholder':'Enter Income in Thousands'}),
             'company_address': forms.TextInput(attrs={'placeholder': 'Enter Company Address'}),

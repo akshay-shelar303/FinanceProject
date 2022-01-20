@@ -1,6 +1,9 @@
 from django import forms
 from .models import Customer
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
 class CustomerForm(forms.ModelForm):
     class Meta:
         model = Customer
@@ -13,7 +16,7 @@ class CustomerForm(forms.ModelForm):
             'email' : forms.TextInput(attrs={'placeholder':'Enter Email Id'}),
             'pan_no' : forms.TextInput(attrs={'placeholder':'Enter Pancard Number'}),
             'aadhar_card' : forms.TextInput(attrs={'placeholder':'Enter Aadhar Card Number'}),
-            'dob' : forms.TextInput(attrs={'placeholder':'Enter Date Of Birth'}),
+            'dob' : DateInput(attrs={'placeholder':'Enter Date Of Birth'}),
         }
 
 

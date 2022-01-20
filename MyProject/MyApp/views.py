@@ -51,7 +51,7 @@ def loandetailsView(request):
             user = form.save(commit=False)
             user.cibil_score = random.randint(700, 900)
             user.save()
-            return redirect('show')
+            return redirect('showloandetails')
     template_name = "DashboardApp/loandetails.html"
     context = {'form': form}
     return render(request, template_name, context)
@@ -59,7 +59,7 @@ def loandetailsView(request):
 
 def show_loandetailsView(request):
     customer_list = LoanDetails.objects.all()
-    template_name = "showdetails.html"
+    template_name = "showloandetails.html"
     context = {'customer_list': customer_list}
     return render(request, template_name, context)
 
@@ -69,10 +69,8 @@ def EnquiryView(request):
     if request.method == 'POST':
         form = EnquiryModelForm(request.POST)
         if form.is_valid():
-            print("form valid")
             form.save()
-
-        print("form not valid")
+            return redirect('/ma/home')
     template_name = 'EnquiryForm1.html'
     context = {'form': form}
     return render(request, template_name, context)
@@ -101,7 +99,7 @@ def update_loandetails(request, i):
         if form.is_valid():
             form.save()
             return redirect('show')
-    template_name = "application.html"
+    template_name = "DashboardApp/loandetails.html"
     context = {'form': form}
     return render(request, template_name, context)
 

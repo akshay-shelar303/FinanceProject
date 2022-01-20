@@ -1,6 +1,9 @@
 from django import forms
 from .models import LoanDetails, Enquiry
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
 
 class LoanDetailsForm(forms.ModelForm):
     class Meta:
@@ -18,6 +21,7 @@ class LoanDetailsForm(forms.ModelForm):
             'email':forms.TextInput(attrs={'placeholder':'Enetr your email'}),
             'pan_number':forms.TextInput(attrs={'placeholder':'Enter your Pan Number'}),
             'required_loan':forms.TextInput(attrs={'placeholder':'Enter Required loan amount'}),
+            'dob':DateInput(attrs={'placeholder':'Enter Birth Date'})
         }
 
 
