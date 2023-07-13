@@ -3,8 +3,18 @@ from .models import PrevLoan
 
 
 class PrevLoanAdmin(admin.ModelAdmin):
-    list_display = ['bank_name', 'branch_name', 'account_no', 'ifsc_code', 'micr_code', 'loan_amount', 'loan_type',
-                    'loan_tenure', 'amount_paid', 'amount_remaining']
+    list_display = [
+        "bank_name",
+        "branch_name",
+        "account_no",
+        "ifsc_code",
+        "micr_code",
+        "loan_amount",
+        "loan_type",
+        "loan_tenure",
+        "amount_paid",
+        "amount_remaining",
+    ]
 
 
 admin.site.register(PrevLoan, PrevLoanAdmin)

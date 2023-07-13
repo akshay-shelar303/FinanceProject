@@ -21,4 +21,4 @@ class Guarantor(models.Model):
     country = models.CharField(max_length=30)
 
     def __str__(self):
-        return f'{self.guarantor_name}'
+        return f"{self.guarantor_name}"

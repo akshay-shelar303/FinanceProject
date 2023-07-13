@@ -5,11 +5,11 @@ from Customer.models import Customer
 # Create your models here.
 class BankDetails(models.Model):
     account_type = (
-        ('SAVING', 'Saving'),
-        ('CURRENT', 'Current'),
-        ('SALARIED', 'Salaried')
+        ("SAVING", "Saving"),
+        ("CURRENT", "Current"),
+        ("SALARIED", "Salaried"),
     )
-    customer = models.OneToOneField(Customer,on_delete=models.CASCADE)
+    customer = models.OneToOneField(Customer, on_delete=models.CASCADE)
     account_holder_name = models.CharField(max_length=100)
     account_no = models.IntegerField()
     bank_name = models.CharField(max_length=100)

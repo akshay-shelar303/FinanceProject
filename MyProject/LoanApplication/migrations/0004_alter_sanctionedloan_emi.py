@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('LoanApplication', '0003_alter_sanctionedloan_approved_loan_and_more'),
+        ("LoanApplication", "0003_alter_sanctionedloan_approved_loan_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='sanctionedloan',
-            name='emi',
+            model_name="sanctionedloan",
+            name="emi",
             field=models.FloatField(blank=True, default=0.0),
         ),
     ]

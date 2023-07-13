@@ -4,25 +4,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('LoanApplication', '0002_alter_sanctionedloan_customer'),
+        ("LoanApplication", "0002_alter_sanctionedloan_customer"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='sanctionedloan',
-            name='approved_loan',
+            model_name="sanctionedloan",
+            name="approved_loan",
             field=models.IntegerField(default=None),
         ),
         migrations.AlterField(
-            model_name='sanctionedloan',
-            name='interest',
+            model_name="sanctionedloan",
+            name="interest",
             field=models.FloatField(default=None),
         ),
         migrations.AlterField(
-            model_name='sanctionedloan',
-            name='tenure',
+            model_name="sanctionedloan",
+            name="tenure",
             field=models.IntegerField(default=None),
         ),
     ]

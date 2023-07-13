@@ -3,7 +3,7 @@ from Customer.models import Customer
 
 
 class SanctionedLoan(models.Model):
-    customer = models.OneToOneField(Customer,on_delete=models.CASCADE)
+    customer = models.OneToOneField(Customer, on_delete=models.CASCADE)
     required_loan = models.IntegerField(default=None)
     approved_loan = models.IntegerField(default=None)
     tenure = models.IntegerField(default=None)

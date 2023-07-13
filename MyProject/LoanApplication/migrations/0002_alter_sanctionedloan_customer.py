@@ -5,16 +5,17 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('Customer', '0001_initial'),
-        ('LoanApplication', '0001_initial'),
+        ("Customer", "0001_initial"),
+        ("LoanApplication", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='sanctionedloan',
-            name='customer',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='Customer.customer'),
+            model_name="sanctionedloan",
+            name="customer",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE, to="Customer.customer"
+            ),
         ),
     ]

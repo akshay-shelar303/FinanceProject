@@ -1,15 +1,11 @@
 from django.db import models
 from Customer.models import Customer
 
-CHOICES = (
-    ('PERSONAL', 'Personal'),
-    ('VEHICLE', 'Vehicle'),
-    ('HOME', 'Home')
-)
+CHOICES = (("PERSONAL", "Personal"), ("VEHICLE", "Vehicle"), ("HOME", "Home"))
 
 
 class PrevLoan(models.Model):
-    customer=models.OneToOneField(Customer,on_delete=models.CASCADE)
+    customer = models.OneToOneField(Customer, on_delete=models.CASCADE)
     bank_name = models.CharField(max_length=50)
     branch_name = models.CharField(max_length=50)
     account_no = models.IntegerField()

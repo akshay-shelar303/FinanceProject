@@ -4,65 +4,78 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('ProfessionalDetails', '0001_initial'),
+        ("ProfessionalDetails", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='annual_turnover',
+            model_name="professionaldetails",
+            name="annual_turnover",
             field=models.FloatField(null=True),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='avg_monthly_income',
+            model_name="professionaldetails",
+            name="avg_monthly_income",
             field=models.FloatField(null=True),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='business_name',
+            model_name="professionaldetails",
+            name="business_name",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='company_address',
+            model_name="professionaldetails",
+            name="company_address",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='designation',
+            model_name="professionaldetails",
+            name="designation",
             field=models.CharField(blank=True, max_length=32),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='itr',
-            field=models.CharField(choices=[('YES', 'Yes'), ('NO', 'No')], default='YES', max_length=50, null=True),
+            model_name="professionaldetails",
+            name="itr",
+            field=models.CharField(
+                choices=[("YES", "Yes"), ("NO", "No")],
+                default="YES",
+                max_length=50,
+                null=True,
+            ),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='joining_date',
+            model_name="professionaldetails",
+            name="joining_date",
             field=models.DateField(null=True),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='mode_of_salary',
-            field=models.CharField(choices=[('ONLINE', 'Online'), ('CHEQUE', 'Cheque'), ('CASH', 'Cash')], default='ONLINE', max_length=50, null=True),
+            model_name="professionaldetails",
+            name="mode_of_salary",
+            field=models.CharField(
+                choices=[("ONLINE", "Online"), ("CHEQUE", "Cheque"), ("CASH", "Cash")],
+                default="ONLINE",
+                max_length=50,
+                null=True,
+            ),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='monthly_income',
+            model_name="professionaldetails",
+            name="monthly_income",
             field=models.FloatField(null=True),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='type_employment',
-            field=models.CharField(choices=[('SALARIED', 'Salaried'), ('SELF-SALARIED', 'Self-Salaried')], max_length=50, null=True),
+            model_name="professionaldetails",
+            name="type_employment",
+            field=models.CharField(
+                choices=[("SALARIED", "Salaried"), ("SELF-SALARIED", "Self-Salaried")],
+                max_length=50,
+                null=True,
+            ),
         ),
         migrations.AlterField(
-            model_name='professionaldetails',
-            name='year_of_exp',
+            model_name="professionaldetails",
+            name="year_of_exp",
             field=models.FloatField(null=True),
         ),
     ]

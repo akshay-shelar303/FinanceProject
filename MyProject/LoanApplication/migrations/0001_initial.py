@@ -5,25 +5,38 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
-        ('Customer', '0001_initial'),
+        ("Customer", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SanctionedLoan',
+            name="SanctionedLoan",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('required_loan', models.IntegerField(default=None)),
-                ('approved_loan', models.IntegerField()),
-                ('tenure', models.IntegerField()),
-                ('interest', models.FloatField()),
-                ('emi', models.FloatField(default=None)),
-                ('is_approved', models.BooleanField(default=False)),
-                ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Customer.customer')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("required_loan", models.IntegerField(default=None)),
+                ("approved_loan", models.IntegerField()),
+                ("tenure", models.IntegerField()),
+                ("interest", models.FloatField()),
+                ("emi", models.FloatField(default=None)),
+                ("is_approved", models.BooleanField(default=False)),
+                (
+                    "customer",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="Customer.customer",
+                    ),
+                ),
             ],
         ),
     ]

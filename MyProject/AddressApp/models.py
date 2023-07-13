@@ -4,8 +4,9 @@ from Customer.models import Customer
 
 # Create your models here.
 
+
 class PermanentAddress(models.Model):
-    customer = models.OneToOneField(Customer,on_delete=models.CASCADE)
+    customer = models.OneToOneField(Customer, on_delete=models.CASCADE)
     flat_no = models.IntegerField()
     street_name = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
@@ -17,9 +18,8 @@ class PermanentAddress(models.Model):
     country = models.CharField(max_length=100)
 
 
-
 class CurrentAddress(models.Model):
-    customer = models.OneToOneField(Customer,on_delete=models.CASCADE)
+    customer = models.OneToOneField(Customer, on_delete=models.CASCADE)
     flat_no_1 = models.IntegerField()
     street_name_1 = models.CharField(max_length=100)
     city_1 = models.CharField(max_length=100)
@@ -29,4 +29,3 @@ class CurrentAddress(models.Model):
     district_1 = models.CharField(max_length=100)
     state_1 = models.CharField(max_length=100)
     country_1 = models.CharField(max_length=100)
-

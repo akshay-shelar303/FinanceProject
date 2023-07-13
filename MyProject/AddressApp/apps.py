@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class AddressappConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'AddressApp'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "AddressApp"

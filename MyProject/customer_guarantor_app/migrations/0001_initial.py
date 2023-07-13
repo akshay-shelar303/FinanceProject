@@ -6,32 +6,50 @@ import phonenumber_field.modelfields
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
-        ('Customer', '0001_initial'),
+        ("Customer", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Guarantor',
+            name="Guarantor",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('guarantor_name', models.CharField(max_length=40)),
-                ('relation_with_cust', models.CharField(max_length=40)),
-                ('profession', models.CharField(max_length=40)),
-                ('contact_no', phonenumber_field.modelfields.PhoneNumberField(max_length=128, region=None, unique=True)),
-                ('aadhar_no', models.CharField(max_length=12)),
-                ('pan_no', models.CharField(max_length=10)),
-                ('house_no', models.CharField(max_length=10)),
-                ('landmark', models.CharField(max_length=400)),
-                ('area', models.CharField(max_length=40)),
-                ('city', models.CharField(max_length=40)),
-                ('pincode', models.IntegerField()),
-                ('state', models.CharField(max_length=20)),
-                ('country', models.CharField(max_length=30)),
-                ('customer', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='Customer.customer')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("guarantor_name", models.CharField(max_length=40)),
+                ("relation_with_cust", models.CharField(max_length=40)),
+                ("profession", models.CharField(max_length=40)),
+                (
+                    "contact_no",
+                    phonenumber_field.modelfields.PhoneNumberField(
+                        max_length=128, region=None, unique=True
+                    ),
+                ),
+                ("aadhar_no", models.CharField(max_length=12)),
+                ("pan_no", models.CharField(max_length=10)),
+                ("house_no", models.CharField(max_length=10)),
+                ("landmark", models.CharField(max_length=400)),
+                ("area", models.CharField(max_length=40)),
+                ("city", models.CharField(max_length=40)),
+                ("pincode", models.IntegerField()),
+                ("state", models.CharField(max_length=20)),
+                ("country", models.CharField(max_length=30)),
+                (
+                    "customer",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="Customer.customer",
+                    ),
+                ),
             ],
         ),
     ]

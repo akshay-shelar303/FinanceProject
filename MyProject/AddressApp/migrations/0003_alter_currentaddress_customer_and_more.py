@@ -5,21 +5,24 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('Customer', '0001_initial'),
-        ('AddressApp', '0002_alter_currentaddress_customer_and_more'),
+        ("Customer", "0001_initial"),
+        ("AddressApp", "0002_alter_currentaddress_customer_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='currentaddress',
-            name='customer',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='Customer.customer'),
+            model_name="currentaddress",
+            name="customer",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE, to="Customer.customer"
+            ),
         ),
         migrations.AlterField(
-            model_name='permanentaddress',
-            name='customer',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='Customer.customer'),
+            model_name="permanentaddress",
+            name="customer",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE, to="Customer.customer"
+            ),
         ),
     ]

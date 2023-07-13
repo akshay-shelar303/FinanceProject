@@ -3,7 +3,7 @@ from .models import CustomUser
 
 
 class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ['username', 'status']
+    list_display = ["username", "status"]
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
